@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Menu Galaktyczne";
+}
+
+<div class="section">
+    <h2 class="center yellow-text">
+        <i class="material-icons large">restaurant</i>
+        <br>
+        Menu Galaktyczne
+    </h2>
+    <p class="center white-text flow-text">
+        Wybierz swoją kategorię i odkryj smaki z całego wszechświata!
+    </p>
+</div>
+
+<!-- Użyj tego samego ViewComponent -->
+@await Component.InvokeAsync("RodzajeMenu")
+
+<!-- Lista wszystkich pizz -->
+<div class="section">
+    <h3 class="yellow-text">Wszystkie nasze pizze</h3>
+
+    <div class="row">
+        @for (int i = 1; i <= 8; i++)
+        {
+            <div class="col s12 m6 l4">
+                <div class="card grey darken-3">
+                    <div class="card-image">
+                        <div style="height: 200px; background: linear-gradient(45deg, #@(i % 2 == 0 ? "b71c1c" : "0d47a1"), #ffc107); display: flex; align-items: center; justify-content: center;">
+                            <h1>🍕</h1>
+                        </div>
+                        <span class="card-title">Pizza Kosmiczna @i</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light red">
+                            <i class="material-icons">add_shopping_cart</i>
+                        </a>
+                    </div>
+                    <div class="card-content white-text">
+                        <p>Składniki: ser, szynka, ananas z Jowisza</p>
+                        <p class="yellow-text"><strong>@(20 + i * 2).99 PLN</strong></p>
+                    </div>
+                    <div class="card-action">
+                        <a href="/Sklep/Szczegoly/@i" class="yellow-text">Zobacz więcej</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
