@@ -1,100 +1,134 @@
 ﻿@{
-    ViewData["Title"] = "Najlepsza pizza w galaktyce";
+    // Tytuł, który od razu uderza w sedno
+    ViewData["Title"] = "GALAK PIZZA: ZAWSZE MIERZY WYŻEJ!";
 }
 
-<!-- Hero Section -->
 <div class="section no-pad-bot" id="hero">
     <div class="container">
         <br><br>
         <h1 class="header center yellow-text text-accent-2">GALAK PIZZA</h1>
         <div class="row center">
             <h5 class="header col s12 light white-text">
-                Pizza z dostawą w całej galaktyce!
+                KOCHANI, PLACUNECZEK STYGNIE! (Nie daj się nam prosić)
                 <br>
-                <span class="yellow-text">🚀 Dostawa UFO w 30 parsek lub gratis! 🚀</span>
+                <span class="red-text text-accent-4">💰 Liczy się hajs, a nie twoje widzimisię! 💰</span>
             </h5>
         </div>
         <div class="row center">
-            <a href="/Sklep" class="btn-large waves-effect waves-light btn-galak">
-                ZAMÓW TERAZ
-                <i class="material-icons right">rocket_launch</i>
+            <a href="/Sklep" class="btn-large waves-effect waves-light red darken-3 pulse">
+                💥 ZAMÓW ŚREDNIĄ HAWAJSKĄ! 💥
+                <i class="material-icons right">local_pizza</i>
             </a>
         </div>
         <br><br>
     </div>
 </div>
+@* Sekcja Filozofia Biznesu Domino Jachasia *@
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col s12 center">
+                <h3 class="red-text text-darken-3">
+                    <i class="material-icons">monetization_on</i>
+                    Filozofia Biznesu Domino Jachasia
+                </h3>
+                <p class="flow-text white-text">
+                    **Jesteśmy Galak Pizza.** Największa sieć pizzerii w całej galaktyce!
+                    Nasz sukces mierzy się w Kurvinoxach zarobionych w ciągu minuty.
+                    Nie pytaj, jak ją dostarczymy – **to nie Twój zasrany interes!**
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!-- Promocje Section -->
+<div class="section grey darken-3 center">
+    <div class="container">
+        <h4 class="yellow-text">Nasz Dostawca – Michał Głuś (KAPITAN DOWOZÓW)</h4>
+        <div class="row">
+            <div class="col s12 m8 offset-m2">
+                <img class="responsive-img z-depth-3"
+                     src="images/gus.jpg"
+                     alt="Michał Głuś na skuterze z Galak Pizzą"
+                     style="border: 5px solid #b71c1c; max-height: 400px; object-fit: cover;">
+                <p class="light white-text">
+                    **„W tej czapce nie wstyd zamówić średnią hawajską!”**
+                    Michał potwierdza jakość czapki, skutera nie.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@await Component.InvokeAsync("RodzajeMenu")
+
 <div class="container">
     <div class="section">
         <div class="row">
             <div class="col s12 center">
                 <h3 class="yellow-text">
                     <i class="material-icons">local_fire_department</i>
-                    Gorące Promocje z Kosmosu
+                    Gorące Promocje Kurvinoxa
                 </h3>
             </div>
         </div>
 
         <div class="row">
-            <!-- Pizza 1 -->
             <div class="col s12 m4">
-                <div class="card hoverable">
+                <div class="card hoverable grey darken-4">
                     <div class="card-image">
                         <div style="height: 200px; background: linear-gradient(45deg, #b71c1c, #ffc107); display: flex; align-items: center; justify-content: center;">
-                            <h1 style="font-size: 100px;">🍕</h1>
+                            <h1 style="font-size: 100px;">💥</h1>
                         </div>
-                        <span class="card-title black-text">Pizza Bomba</span>
+                        <span class="card-title black-text">Pizza SE-KSPERT (Mega Ostra)</span>
                         <a class="btn-floating halfway-fab waves-effect waves-light red">
                             <i class="material-icons">add</i>
                         </a>
                     </div>
-                    <div class="card-content">
-                        <p>Ostra jak język Kapitana! Jalapeño, salami picante, tabasco.</p>
-                        <p class="yellow-text text-darken-2">
-                            <strong>29.99 PLN</strong>
+                    <div class="card-content white-text">
+                        <p>Ostra jak język Kapitana i mały wuj! Sos z Chorągwianka i papryczki "Wali Goryl".</p>
+                        <p class="yellow-text text-accent-4">
+                            <strong>Cena: Nie Twoja sprawa. Zapłać.</strong>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Pizza 2 -->
             <div class="col s12 m4">
-                <div class="card hoverable">
+                <div class="card hoverable grey darken-4">
                     <div class="card-image">
                         <div style="height: 200px; background: linear-gradient(45deg, #0d47a1, #00e676); display: flex; align-items: center; justify-content: center;">
-                            <h1 style="font-size: 100px;">🛸</h1>
+                            <h1 style="font-size: 100px;">🍍</h1>
                         </div>
-                        <span class="card-title white-text">Pizza UFO</span>
+                        <span class="card-title white-text">ŚREDNIA HAWAJSKA (Kultowa)</span>
                         <a class="btn-floating halfway-fab waves-effect waves-light red">
                             <i class="material-icons">add</i>
                         </a>
                     </div>
-                    <div class="card-content">
-                        <p>Tajemnicze składniki z obcej planety (ser, szynka, pieczarki).</p>
-                        <p class="yellow-text text-darken-2">
-                            <strong>34.99 PLN</strong>
+                    <div class="card-content white-text">
+                        <p>Tak, jest z ananasem. Nie, nie będziemy dyskutować. Kto ma problem, ten Głuś.</p>
+                        <p class="yellow-text text-accent-4">
+                            <strong>TYLKO 39,99 (Dla zasady!)</strong>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Pizza 3 -->
             <div class="col s12 m4">
-                <div class="card hoverable">
+                <div class="card hoverable grey darken-4">
                     <div class="card-image">
                         <div style="height: 200px; background: linear-gradient(45deg, #212121, #ffc107); display: flex; align-items: center; justify-content: center;">
                             <h1 style="font-size: 100px;">⭐</h1>
                         </div>
-                        <span class="card-title white-text">Pizza Gwiezdna</span>
+                        <span class="card-title white-text">Kurvinox Specjal</span>
                         <a class="btn-floating halfway-fab waves-effect waves-light red">
                             <i class="material-icons">add</i>
                         </a>
                     </div>
-                    <div class="card-content">
-                        <p>Klasyka z gwiazdozbioru Margherity. Bazyli, mozzarella, pomidory.</p>
-                        <p class="yellow-text text-darken-2">
-                            <strong>27.99 PLN</strong>
+                    <div class="card-content white-text">
+                        <p>Smakuje jak zwycięstwo i hajs. Opcjonalnie: sos chlebowy.</p>
+                        <p class="yellow-text text-accent-4">
+                            <strong>ZAWSZE NAJTANIEJ (Żartowałem, drogo!)</strong>
                         </p>
                     </div>
                 </div>
@@ -103,37 +137,35 @@
     </div>
 </div>
 
-<!-- Features Section -->
 <div class="section grey darken-4">
     <div class="container">
         <div class="row">
             <div class="col s12 m4 center">
-                <i class="material-icons large yellow-text">rocket</i>
-                <h5 class="white-text">Szybka Dostawa UFO</h5>
-                <p class="light grey-text">30 parsek lub pizza gratis!</p>
+                <i class="material-icons large red-text">timer</i>
+                <h5 class="white-text">Dostawa – Szybciej niż Myślisz!</h5>
+                <p class="light grey-text">Przewidywany czas: od 5 minut do 10 lat. Zależy od humoru Kurvinoxa za kierownicą.</p>
             </div>
             <div class="col s12 m4 center">
-                <i class="material-icons large yellow-text">restaurant</i>
-                <h5 class="white-text">Składniki z Kosmosu</h5>
-                <p class="light grey-text">Importowane z najlepszych planet</p>
+                <i class="material-icons large red-text">sentiment_neutral</i>
+                <h5 class="white-text">Kontrowersyjne Menu</h5>
+                <p class="light grey-text">Importowane z planet: Ch*j, D*pa i Kamper. Wersja z ananasem to podstawa.</p>
             </div>
             <div class="col s12 m4 center">
-                <i class="material-icons large yellow-text">military_tech</i>
-                <h5 class="white-text">Rekomendacja Kapitana</h5>
-                <p class="light grey-text">"Zarąbiście dobre!" - Kapitan Bomba</p>
+                <i class="material-icons large red-text">report_problem</i>
+                <h5 class="white-text">OSTRZEŻENIE JACHASIA</h5>
+                <p class="light grey-text">"Nasza pizza uzależnia – jak cywilne życie dla Kurvinoxa. Masz problem? Twój problem."</p>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Parallax Section (opcjonalnie) -->
 <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
         <div class="container">
             <div class="row center">
-                <h5 class="header col s12 light white-text">
-                    "Ta pizza jest lepsza niż całe te Gwiezdne Wojny!"
-                    <br>- Zadowolony Klient z Marsa
+                <h5 class="header col s12 light yellow-text text-accent-2">
+                    "Za pizzę bym umarł. A i tak bym musiał ją opłacić. Tak działa Galak Pizza!"
+                    <br>- Zadowolony, ale Bankrutujący Klient z Tytana
                 </h5>
             </div>
         </div>

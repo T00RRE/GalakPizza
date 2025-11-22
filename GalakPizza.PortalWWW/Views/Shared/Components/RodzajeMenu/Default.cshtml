@@ -1,0 +1,67 @@
+﻿@model List<GalakPizza.PortalWWW.ViewComponents.KategoriaModel>
+
+<div class="categories-menu">
+    <div class="row">
+        <div class="col s12">
+            <h4 class="center yellow-text">
+                <i class="material-icons">restaurant_menu</i>
+                Eksploruj Galaktyczne Menu
+            </h4>
+        </div>
+    </div>
+
+    <div class="row">
+        @foreach (var kategoria in Model)
+        {
+            <div class="col s12 m6 l3">
+                <div class="card hoverable category-card grey darken-3">
+                    <a href="/Sklep?kategoria=@kategoria.Id" class="card-link">
+                        <div class="card-content white-text center">
+                            <i class="material-icons large yellow-text category-icon">@kategoria.Ikona</i>
+                            <h5 class="yellow-text">@kategoria.Nazwa</h5>
+                            <p class="grey-text text-lighten-1">@kategoria.Opis</p>
+                            <br>
+                            <span class="btn btn-small btn-galak">
+                                Zobacz pizze
+                                <i class="material-icons right tiny">arrow_forward</i>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .category-card {
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+        .category-card:hover {
+            border-color: var(--galak-yellow);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 193, 7, 0.3);
+        }
+
+    .category-icon {
+        transition: transform 0.3s ease;
+    }
+
+    .category-card:hover .category-icon {
+        transform: rotate(15deg) scale(1.1);
+    }
+
+    .card-link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .categories-menu {
+        padding: 30px 0;
+        background: rgba(33, 33, 33, 0.5);
+        border-radius: 10px;
+        margin: 20px 0;
+    }
+</style>
