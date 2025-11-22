@@ -1,5 +1,4 @@
 <Solution>
-  <Project Path="GalakPizza.Data/GalakPizza.Data.csproj" />
   <Project Path="GalakPizza.Intranet/GalakPizza.Intranet.csproj" />
   <Project Path="GalakPizza.PortalWWW/GalakPizza.PortalWWW.csproj" />
 </Solution>

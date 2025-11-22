@@ -1,4 +1,20 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿$(document).ready(function () {
+    // Inicjalizacja Materialize
+    $('.sidenav').sidenav();
+    $('.parallax').parallax();
 
-// Write your JavaScript code.
+    // Easter egg - Konami code
+    let konamiCode = [];
+    const pattern = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+
+    $(document).keyup(function (e) {
+        konamiCode.push(e.keyCode);
+        if (konamiCode.length > pattern.length) {
+            konamiCode.shift();
+        }
+        if (konamiCode.toString() === pattern.toString()) {
+            alert("Reszta załogi nie żyje!");
+            $('body').addClass('rainbow-mode');
+        }
+    });
+});

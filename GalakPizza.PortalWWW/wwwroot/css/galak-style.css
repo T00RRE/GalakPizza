@@ -1,0 +1,246 @@
+﻿@font-face {
+    font-family: 'Orbitron';
+    src: url('../fonts/orbitron/Orbitron-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../fonts/orbitron/Orbitron-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../fonts/orbitron/Orbitron-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+h1, h2, h3, h4, h5, h6, .brand-logo {
+    font-family: 'Orbitron', monospace;
+}
+
+nav .brand-logo {
+    font-family: 'Orbitron', monospace;
+    font-weight: 900; /* Użyj Black dla logo */
+    /* ... reszta stylów ... */
+}
+:root {
+    --galak-red: #b71c1c;
+    --galak-yellow: #ffc107;
+    --galak-dark: #212121;
+    --galak-space: #0d47a1;
+    --galak-green: #00e676;
+}
+
+/* Tło kosmiczne */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0d47a1 0%, #212121 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Navbar styling */
+nav {
+    background-color: rgba(33, 33, 33, 0.95) !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+    nav .brand-logo {
+        color: var(--galak-yellow) !important;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+/* Przyciski w stylu Galak */
+.btn-galak {
+    background: linear-gradient(45deg, var(--galak-red), var(--galak-yellow));
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+    .btn-galak:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 20px rgba(255, 193, 7, 0.4);
+    }
+
+/* Koszyk badge */
+.cart-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--galak-red);
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+/* Hero Section */
+#hero {
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+    /* Animowane gwiazdki w tle */
+    #hero::before {
+        content: '✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦';
+        position: absolute;
+        top: 20%;
+        left: 0;
+        right: 0;
+        color: rgba(255, 255, 255, 0.1);
+        font-size: 40px;
+        letter-spacing: 100px;
+        animation: stars 20s linear infinite;
+    }
+
+@keyframes stars {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100px);
+    }
+}
+
+/* Card hover effects */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 10px 30px rgba(255, 193, 7, 0.3);
+    }
+
+/* Pulsujący przycisk */
+.btn-galak {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 193, 7, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+    }
+}
+
+/* Features section icons */
+.section i.large {
+    transition: transform 0.3s ease;
+}
+
+    .section i.large:hover {
+        transform: rotate(15deg) scale(1.1);
+    }
+/* Hero Section */
+#hero {
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+    /* Animowane gwiazdki w tle */
+    #hero::before {
+        content: '✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦';
+        position: absolute;
+        top: 20%;
+        left: 0;
+        right: 0;
+        color: rgba(255, 255, 255, 0.1);
+        font-size: 40px;
+        letter-spacing: 100px;
+        animation: stars 20s linear infinite;
+    }
+
+@keyframes stars {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100px);
+    }
+}
+
+/* Card hover effects */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 10px 30px rgba(255, 193, 7, 0.3);
+    }
+
+/* Pulsujący przycisk */
+.btn-galak {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 193, 7, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+    }
+}
+
+/* Features section icons */
+.section i.large {
+    transition: transform 0.3s ease;
+}
+
+    .section i.large:hover {
+        transform: rotate(15deg) scale(1.1);
+    }
