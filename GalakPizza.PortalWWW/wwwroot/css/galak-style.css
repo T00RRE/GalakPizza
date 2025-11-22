@@ -244,3 +244,77 @@ nav {
     .section i.large:hover {
         transform: rotate(15deg) scale(1.1);
     }
+/* Timeline dla About */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: var(--galak-yellow);
+        transform: translateX(-50%);
+    }
+
+.timeline-event {
+    position: relative;
+    margin: 20px 0;
+}
+
+.timeline-content {
+    width: 45%;
+    margin-left: auto;
+    position: relative;
+}
+
+.timeline-event:nth-child(even) .timeline-content {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.timeline-content::before {
+    content: '🚀';
+    position: absolute;
+    font-size: 24px;
+    top: 20px;
+    right: -60px;
+}
+
+.timeline-event:nth-child(even) .timeline-content::before {
+    left: -60px;
+    right: auto;
+}
+
+/* Formularz kontaktowy */
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus,
+.input-field textarea:focus {
+    border-bottom: 1px solid var(--galak-yellow) !important;
+    box-shadow: 0 1px 0 0 var(--galak-yellow) !important;
+}
+
+.input-field label.active {
+    color: var(--galak-yellow) !important;
+}
+
+/* Responsive timeline */
+@media only screen and (max-width: 600px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 50px);
+        margin-left: 50px !important;
+    }
+
+        .timeline-content::before {
+            left: -35px !important;
+            right: auto !important;
+        }
+}
